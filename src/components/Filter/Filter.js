@@ -1,6 +1,6 @@
 import styles from './Filter.module.scss';
 import { v4 as uuidv4 } from 'uuid';
-
+import PropTypes from 'prop-types';
 const filterId = uuidv4();
 
 const Filter = ({ value, onChange }) => (
@@ -21,3 +21,8 @@ const Filter = ({ value, onChange }) => (
 );
 
 export default Filter;
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};

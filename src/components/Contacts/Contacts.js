@@ -1,5 +1,6 @@
 import ContactsElement from './ContactsElement';
 import styles from './Contacts.module.scss';
+import PropTypes from 'prop-types';
 
 const Contacts = ({ contacts, onDeleteContact }) => {
   return (
@@ -20,3 +21,8 @@ const Contacts = ({ contacts, onDeleteContact }) => {
 };
 
 export default Contacts;
+
+Contacts.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
+};
